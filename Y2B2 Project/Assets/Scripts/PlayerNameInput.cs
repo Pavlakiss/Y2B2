@@ -4,14 +4,15 @@ using System.Diagnostics;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerNameInput : MonoBehaviour
 {
     public string NameOfPlayer;
     public string SaveName;
 
-    public Text InputText;
-    public Text LoadedName;
+    public TextMeshProUGUI InputText;
+    public TextMeshProUGUI LoadedName;
 
     public static List<string> PlayerNamesList = new List<string>();
 
