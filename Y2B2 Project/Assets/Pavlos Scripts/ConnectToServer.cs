@@ -30,6 +30,10 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         Debug.Log("Joined Photon Lobby!");
-        PhotonNetwork.LoadLevel("Lobby_Name_Input");
+
+        PhotonNetwork.LoadLevel("Game_Vote");
     }
 }
+
+
+
