@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CountdownController : MonoBehaviour
 {
     public int countdownTime;
     public TextMeshProUGUI countdownDisplay;
+    public string nextSceneName;
 
     private void Start()
     {
@@ -31,5 +33,6 @@ public class CountdownController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         countdownDisplay.gameObject.SetActive(false);
+        SceneManager.LoadScene(nextSceneName);
     }
 }

@@ -33,7 +33,7 @@ public class PlayerNameInput : MonoBehaviour
             PlayerPrefs.SetString("name", SaveName); // Save the name locally
             PlayerNames.Instance.SavePlayerName(SaveName); // Save the name to Photon
 
-            PhotonNetwork.LoadLevel("Loading"); // Load the next scene
+            PhotonNetwork.LoadLevel("Lobby"); // Load the next scene
         }
         else
         {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1812,35 +1812,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1196231864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e17aeac24c274408675a0be9ae4d68, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cb691b2f6f94c2428dd2c8e441d43b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNames:
-  - 
-  - 
-  - 
-  - 
-  - 
-  playerNameTexts:
-  - {fileID: 260388885}
-  - {fileID: 1746087121}
-  - {fileID: 157140489}
-  - {fileID: 142955963}
-  - {fileID: 355390761}
-  playerScores: 0000000000000000000000000000000000000000
+  playerNames: []
+  playerNameTexts: []
+  playerScores: 
   scoreTotal: 0
-  playerScoreTexts:
-  - {fileID: 2057707825}
-  - {fileID: 1231537010}
-  - {fileID: 1741210561}
-  - {fileID: 422509222}
-  - {fileID: 1871697579}
-  scoreRank:
-  - {fileID: 521033398}
-  - {fileID: 253340221}
-  - {fileID: 735537665}
-  - {fileID: 1809917548}
-  - {fileID: 1607101925}
+  playerScoreTexts: []
+  scoreRank: []
 --- !u!4 &1196231866
 Transform:
   m_ObjectHideFlags: 0

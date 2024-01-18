@@ -36,9 +36,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined Photon Lobby!");
 
-        PhotonNetwork.LoadLevel("Game_Vote");
+        PhotonNetwork.LoadLevel("Lobby_NameInput");
     }
 }
-
-
-

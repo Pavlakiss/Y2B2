@@ -29,7 +29,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Game");
+        PhotonNetwork.LoadLevel("Game_Ai");
     }
     public override void OnCreateRoomFailed(short returnCode, string message)
     {

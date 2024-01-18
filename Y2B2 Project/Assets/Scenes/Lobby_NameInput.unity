@@ -935,9 +935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73016d27ca5b5b743aba4890b8d19a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playernames: {fileID: 1019400347}
-  NameOfPlayer: 
-  SaveName: 
   InputText: {fileID: 1331671753}
   LoadedName: {fileID: 15154993}
   NameTaken: {fileID: 2051762014}
@@ -970,7 +967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c7b2117b25ac149926025592567027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNamesList: []
 --- !u!4 &1019400348
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,7 +1269,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 962679049}
         m_TargetAssemblyTypeName: PlayerNameInput, Assembly-CSharp
-        m_MethodName: SetName
+        m_MethodName: TrySetName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
