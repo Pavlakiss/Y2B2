@@ -10,21 +10,30 @@ public class ButtonBehavior : MonoBehaviour
 
     public void OnButtonPress()
     {
-        if (votemechanic == null)  // Check if votemechanic is null
+        // First, check if the VoteMechanic script is assigned
+        if (votemechanic == null)
         {
-            Debug.LogError("VoteMechanic is not assigned, drag the object the script is assigned to into this scripts assigned serialized field.");
-            votemechanic.GetComponent<PhotonView>().RPC("ReceiveVote", RpcTarget.All, ButtonOption);
+            Debug.LogError("VoteMechanic is not assigned. Please assign it in the inspector.");
             return;
         }
 
+        // Check if we're currently in the VotingPhase
         if (!votemechanic.VotingPhase)
         {
+            Debug.LogWarning("It's not the voting phase right now.");
             return;
+        }
+
+        // If everything is in order, send the vote
+        Debug.Log("Vote button pressed for option: " + ButtonOption);
+        PhotonView photonView = votemechanic.GetComponent<PhotonView>();
+        if (photonView != null)
+        {
+            photonView.RPC("ReceiveVote", RpcTarget.All, ButtonOption);
         }
         else
         {
-            Debug.Log("pressed");
-            votemechanic.GetComponent<PhotonView>().RPC("ReceiveVote", RpcTarget.All, ButtonOption);
+            Debug.LogError("Could not find PhotonView component on VoteMechanic.");
         }
     }
 }

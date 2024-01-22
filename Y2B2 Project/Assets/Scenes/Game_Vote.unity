@@ -1539,6 +1539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 538288888}
+  - component: {fileID: 538288889}
   m_Layer: 0
   m_Name: Button_Behaviour
   m_TagString: Untagged
@@ -1561,6 +1562,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &538288889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538288887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 0}
+  ButtonOption: 
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &659125425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972658951}
+  - component: {fileID: 972658952}
   m_Layer: 0
   m_Name: Vote_Mechanic
   m_TagString: Untagged
@@ -2220,6 +2238,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &972658952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972658950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4fddd83256a98408877d8212b63798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPlayers: 5
+  PlayerPhase: 0
+  VotingPhase: 0
+  ReadyPhase: 0
+  ResultPhase: 0
 --- !u!1 &978508830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,9 +2987,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1629116725}
-        m_TargetAssemblyTypeName: VotingButton, Assembly-CSharp
-        m_MethodName: ButtonFunction
+      - m_Target: {fileID: 538288889}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
