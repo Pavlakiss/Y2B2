@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 16560534}
   - component: {fileID: 16560533}
   - component: {fileID: 16560532}
+  - component: {fileID: 16560535}
   m_Layer: 5
   m_Name: Vote Button 3
   m_TagString: Untagged
@@ -341,7 +342,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 16560533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 16560535}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &16560533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +393,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16560530}
   m_CullTransparentMesh: 1
+--- !u!114 &16560535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16560530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 972658952}
+  ButtonOption: Option 3
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &140650662
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +421,7 @@ GameObject:
   - component: {fileID: 140650666}
   - component: {fileID: 140650665}
   - component: {fileID: 140650664}
+  - component: {fileID: 140650667}
   m_Layer: 5
   m_Name: Vote Button 6
   m_TagString: Untagged
@@ -462,7 +492,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 140650665}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 140650667}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &140650665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +543,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140650662}
   m_CullTransparentMesh: 1
+--- !u!114 &140650667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140650662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 972658952}
+  ButtonOption: Option 6
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &152503702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1224,7 @@ GameObject:
   - component: {fileID: 312846508}
   - component: {fileID: 312846507}
   - component: {fileID: 312846506}
+  - component: {fileID: 312846509}
   m_Layer: 5
   m_Name: Vote Button 5
   m_TagString: Untagged
@@ -1236,7 +1295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 312846507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 312846509}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &312846507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,6 +1346,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312846504}
   m_CullTransparentMesh: 1
+--- !u!114 &312846509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312846504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 972658952}
+  ButtonOption: Option 5
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +2058,7 @@ GameObject:
   - component: {fileID: 832014702}
   - component: {fileID: 832014701}
   - component: {fileID: 832014700}
+  - component: {fileID: 832014703}
   m_Layer: 5
   m_Name: Vote Button 2
   m_TagString: Untagged
@@ -2041,7 +2129,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 832014701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 832014703}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &832014701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,6 +2180,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832014698}
   m_CullTransparentMesh: 1
+--- !u!114 &832014703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832014698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 972658952}
+  ButtonOption: Option 2
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,6 +2893,7 @@ GameObject:
   - component: {fileID: 1473121165}
   - component: {fileID: 1473121164}
   - component: {fileID: 1473121163}
+  - component: {fileID: 1473121166}
   m_Layer: 5
   m_Name: Vote Button 4
   m_TagString: Untagged
@@ -2847,7 +2964,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1473121164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1473121166}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1473121164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,6 +3015,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473121161}
   m_CullTransparentMesh: 1
+--- !u!114 &1473121166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473121161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 972658952}
+  ButtonOption: Option 4
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &1629116723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,7 +3043,7 @@ GameObject:
   - component: {fileID: 1629116728}
   - component: {fileID: 1629116727}
   - component: {fileID: 1629116726}
-  - component: {fileID: 1629116725}
+  - component: {fileID: 1629116729}
   m_Layer: 5
   m_Name: Vote Button 1
   m_TagString: Untagged
@@ -2926,23 +3071,6 @@ RectTransform:
   m_AnchoredPosition: {x: 39.3, y: -34.7418}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1629116725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629116723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac4fddd83256a98408877d8212b63798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPlayers: 5
-  PlayerPhase: 0
-  VotingPhase: 1
-  ReadyPhase: 0
-  ResultPhase: 0
 --- !u!114 &1629116726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2987,7 +3115,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 538288889}
+      - m_Target: {fileID: 1629116729}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: OnButtonPress
         m_Mode: 1
@@ -3037,6 +3165,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629116723}
   m_CullTransparentMesh: 1
+--- !u!114 &1629116729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629116723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  votemechanic: {fileID: 972658952}
+  ButtonOption: Option 1
+  creatorName: 
+  VotingPlayer: 
 --- !u!1 &1685057087
 GameObject:
   m_ObjectHideFlags: 0
