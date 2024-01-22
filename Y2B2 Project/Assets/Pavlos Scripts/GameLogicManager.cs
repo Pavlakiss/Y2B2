@@ -20,9 +20,12 @@ public class GameLogicManager : MonoBehaviourPunCallbacks
 
     void TransitionToVotingPhase()
     {
+        // Use InputManager.playerResponses directly
+        displayResponses.UpdateVotingOptions(InputManager.playerResponses);
         voteMechanic.VotingPhase = true;
         SimulateFakePlayerVote();
     }
+
 
     void SimulateFakePlayerVote()
     {
