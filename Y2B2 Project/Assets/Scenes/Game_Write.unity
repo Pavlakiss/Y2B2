@@ -901,9 +901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7151a56318bf52347beb5e3021aee638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 0
+  countdownTime: 5
   countdownDisplay: {fileID: 1418119524}
-  nextSceneName: 
+  nextSceneName: Game_Vote
 --- !u!1 &546184027
 GameObject:
   m_ObjectHideFlags: 0

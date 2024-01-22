@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game_Write.unity
     guid: ae6706782bde1484c85de33c93927b1e
   - enabled: 1
+    path: Assets/Scenes/Game_Vote.unity
+    guid: 52ef3646c33fa7348aa91ce43f3e375c
+  - enabled: 1
     path: Assets/Scenes/Game_Leaderboard.unity
     guid: 103d408c9f2bc494b8521694dc43c5c4
   m_configObjects: {}
