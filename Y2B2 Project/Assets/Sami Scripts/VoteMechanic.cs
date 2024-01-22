@@ -47,27 +47,17 @@ public class VoteMechanic : MonoBehaviourPunCallbacks
 
     // RPC to receive votes
     [PunRPC]
-    public void ReceiveVote(string option, PhotonMessageInfo info)
+    public void ReceiveVote(string option)
     {
-        int voterId = info.Sender.ActorNumber;
-
-        // Check if the player has already voted
-        if (playersWhoVoted.Contains(voterId))
-        {
-            Debug.Log($"Player {voterId} has already voted.");
-            return;
-        }
-
-            if (!votes.ContainsKey(option))
+        if (!votes.ContainsKey(option))
         {
             votes[option] = 0;
         }
         votes[option]++;
 
+        Debug.Log($"Fake player vote received for option {option}. Total votes for this option: {votes[option]}");
 
-        // Add the player's ID to the set of players who have voted
-        playersWhoVoted.Add(voterId);
-        Debug.Log($"Vote received for option {option}. Total votes for this option: {votes[option]}");
         CheckIfAllVotesReceived();
     }
+
 }
