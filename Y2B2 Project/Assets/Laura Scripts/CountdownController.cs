@@ -26,7 +26,7 @@ public class CountdownController : MonoBehaviour
 
             countdownTime--;
         }
-        countdownDisplay.text = "GO!";
+        countdownDisplay.text = "GO";
 
         //GameController.instance.BeginGame();
 
