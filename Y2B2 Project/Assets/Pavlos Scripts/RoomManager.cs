@@ -27,21 +27,28 @@ public class RoomManager : MonoBehaviourPunCallbacks
         if (!string.IsNullOrEmpty(roomName))
         {
             RoomOptions options = new RoomOptions();
-            options.MaxPlayers = 2; // You can set the max players for the room
+            options.MaxPlayers = 2; // Set the max players for the room
+            options.IsOpen = true; // Ensure the room is open to join
+            options.IsVisible = true; // Ensure the room is visible in the lobby
             PhotonNetwork.CreateRoom(roomName, options);
         }
         else
         {
-            Debug.LogError("Room name is empty or null."); // Add this line
+            Debug.LogError("Room name is empty or null.");
         }
     }
 
     public void JoinRoom()
     {
         string roomName = joinInput.text;
+        Debug.Log("Trying to join room with name: " + roomName);
         if (!string.IsNullOrEmpty(roomName))
         {
             PhotonNetwork.JoinRoom(roomName);
+        }
+        else
+        {
+            Debug.LogError("Room name to join is empty or null.");
         }
     }
 
