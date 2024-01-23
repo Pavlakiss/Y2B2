@@ -28,11 +28,7 @@ public class CountdownController : MonoBehaviour
         }
         countdownDisplay.text = "GO";
 
-        //GameController.instance.BeginGame();
-
-        yield return new WaitForSeconds(1f);
-
-        countdownDisplay.gameObject.SetActive(false);
+        // When countdown reaches zero, load the next scene
         SceneManager.LoadScene(nextSceneName);
     }
 }
