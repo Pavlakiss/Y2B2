@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: bd706d09da4d3ff478fe3655c5746e67
   - enabled: 1
     path: Assets/Scenes/StartScreen.unity
-    guid: cf58ce9f37e62fb4e91fd7bc2df89660
+    guid: 2e6c22bec0257984cbf4eccb62d31336
   - enabled: 1
     path: Assets/Scenes/Lobby_NameInput.unity
     guid: 639999f4a5c1d434ebc30fdfe74964f2
@@ -33,6 +33,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Game_Vote.unity
     guid: 52ef3646c33fa7348aa91ce43f3e375c
   - enabled: 1
+    path: Assets/Scenes/RightAnswer.unity
+    guid: 54cd831e6cc893743870b766aa86673c
+  - enabled: 1
+    path: Assets/Scenes/Timer1.unity
+    guid: f95d9d7bfb0c2cc49ac1830bfa835c34
+  - enabled: 1
+    path: Assets/Scenes/Game_Write1.unity
+    guid: 48d6d7be3b0389a42952564791806fe1
+  - enabled: 1
+    path: Assets/Scenes/Game_Vote1.unity
+    guid: fe4386465d51867468dc978d14d365ca
+  - enabled: 1
+    path: Assets/Scenes/RightAnswer1.unity
+    guid: eb520d6d9e06d28489ce73098bcc3bc5
+  - enabled: 1
+    path: Assets/Scenes/Timer2.unity
+    guid: 51f71916ed54f0944a854519c96c7520
+  - enabled: 1
+    path: Assets/Scenes/Game_Write2.unity
+    guid: 27fd143010994324fa8a477e82cab2f8
+  - enabled: 1
+    path: Assets/Scenes/Game_Vote2.unity
+    guid: 1a279193480c4aa49adb6028bd12be0e
+  - enabled: 1
+    path: Assets/Scenes/RightAnswer2.unity
+    guid: ec20c8ea0a89ddf45864a6e3988d984c
+  - enabled: 1
     path: Assets/Scenes/Game_Leaderboard.unity
     guid: 103d408c9f2bc494b8521694dc43c5c4
+  - enabled: 1
+    path: Assets/Scenes/Game_End.unity
+    guid: cf58ce9f37e62fb4e91fd7bc2df89660
   m_configObjects: {}

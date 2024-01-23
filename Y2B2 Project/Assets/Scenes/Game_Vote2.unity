@@ -3312,7 +3312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTimeInSeconds: 30
   countdownTimeText: {fileID: 1290395257}
-  nextSceneName: RightAnswer
+  nextSceneName: RightAnswer2
 --- !u!95 &1438275935
 Animator:
   serializedVersion: 5
