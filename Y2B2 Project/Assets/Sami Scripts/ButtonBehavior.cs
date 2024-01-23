@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonBehavior : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class ButtonBehavior : MonoBehaviour
 
         // If everything is in order, send the vote
         Debug.Log("Vote button pressed for option: " + ButtonOption);
+
+        //change color fo the button to grey to indicate that the player has voted
+        gameObject.GetComponent<Image>().color = Color.grey;
+
         PhotonView photonView = votemechanic.GetComponent<PhotonView>();
         if (photonView != null)
         {
@@ -35,5 +40,6 @@ public class ButtonBehavior : MonoBehaviour
         {
             Debug.LogError("Could not find PhotonView component on VoteMechanic.");
         }
+
     }
 }
