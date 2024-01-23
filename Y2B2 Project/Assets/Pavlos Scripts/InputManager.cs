@@ -4,15 +4,19 @@ using TMPro;
 
 public class InputManager : MonoBehaviour
 {
-    public static List<string> playerResponses = new List<string>(); // This list will store the responses
+    public static List<string> playerResponses = new List<string>(); // Static list to hold responses
     public TMP_InputField inputField;
 
     public void SubmitResponse()
     {
         if (!string.IsNullOrEmpty(inputField.text))
         {
-            playerResponses.Add(inputField.text); // Add the input text to the responses list
-            inputField.text = ""; // Clear the input field
+            // Assuming playerResponses is a static list where you store responses
+            // InputManager.playerResponses.Add(inputField.text);
+
+            // Clear the input field
+            inputField.text = "";
         }
     }
 }
+

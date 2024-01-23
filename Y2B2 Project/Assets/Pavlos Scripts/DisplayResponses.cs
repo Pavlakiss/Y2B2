@@ -8,7 +8,10 @@ public class DisplayResponses : MonoBehaviour
 
     void Start()
     {
-        UpdateVotingOptions(InputManager.playerResponses);
+        if (InputManager.playerResponses != null)
+        {
+            UpdateVotingOptions(InputManager.playerResponses);
+        }
     }
 
     public void UpdateVotingOptions(List<string> newResponses)
