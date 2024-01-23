@@ -49,7 +49,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         roomInfoText.text = "Joined Room: " + PhotonNetwork.CurrentRoom.Name;
         UpdatePlayerList();
-        PhotonNetwork.LoadLevel("Game"); // Load the game scene
+        PhotonNetwork.LoadLevel("Game_Ai"); // Load the game scene
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
