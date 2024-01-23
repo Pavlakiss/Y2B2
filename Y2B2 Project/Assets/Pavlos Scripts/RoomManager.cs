@@ -16,15 +16,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     private bool isJoiningRoom = false;
     private string roomNameToJoin = "";
 
-    public override void OnConnectedToMaster()
-    {
-        if (isJoiningRoom)
-        {
-            PhotonNetwork.JoinRoom(roomNameToJoin);
-            isJoiningRoom = false;
-        }
-    }
-
     void Start()
     {
         // Initialize UI
@@ -44,8 +35,14 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.LogError("Room name is empty or null."); 
+            Debug.LogError("Room name is empty or null.");
         }
+    }
+
+    public void JoinRoom()
+    {
+        string roomName = joinInput.text;
+        JoinRoom(roomName);
     }
 
     public void JoinRoom(string roomName)
@@ -58,7 +55,20 @@ public class RoomManager : MonoBehaviourPunCallbacks
         {
             isJoiningRoom = true;
             roomNameToJoin = roomName;
-            // Optional: Connect to Photon Server if not connected
+            if (!PhotonNetwork.IsConnected)
+            {
+                // Connect to the Photon server
+                PhotonNetwork.ConnectUsingSettings();
+            }
+        }
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        if (isJoiningRoom)
+        {
+            PhotonNetwork.JoinRoom(roomNameToJoin);
+            isJoiningRoom = false;
         }
     }
 
@@ -101,7 +111,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.PlayerList.Length == maxPlayers)
         {
             // Load the game scene
-            PhotonNetwork.LoadLevel("Game_Ai");
+            if (PhotonNetwork.IsMasterClient) // Optionally only let the master client load the scene
+            {
+                PhotonNetwork.LoadLevel("Game_Ai");
+            }
         }
     }
 }
