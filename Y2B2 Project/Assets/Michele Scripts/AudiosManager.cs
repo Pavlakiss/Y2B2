@@ -2,7 +2,7 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
-public class Audio_Manager : MonoBehaviour
+public class AudiosManager : MonoBehaviour
 
 {
     public Sound[] sounds;
@@ -19,6 +19,10 @@ public class Audio_Manager : MonoBehaviour
      }  
     }
 
+    void Start ()
+    {
+        Play("Writing Music");
+    }
     
     public void Play (string name)
     {
