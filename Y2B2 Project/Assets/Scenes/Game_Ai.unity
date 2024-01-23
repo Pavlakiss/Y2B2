@@ -6431,6 +6431,7 @@ GameObject:
   - component: {fileID: 2016939327}
   - component: {fileID: 2016939326}
   - component: {fileID: 2016939328}
+  - component: {fileID: 2016939329}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -6481,6 +6482,18 @@ MonoBehaviour:
   countdownTime: 100
   countdownDisplay: {fileID: 1161289101}
   nextSceneName: Timer
+--- !u!114 &2016939329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016939325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84bb5e4568a81534e837087fbfbcf22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2093830174
 GameObject:
   m_ObjectHideFlags: 0
