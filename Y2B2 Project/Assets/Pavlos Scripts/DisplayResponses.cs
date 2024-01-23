@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
+
 public class DisplayResponses : MonoBehaviour
 {
     public List<TMP_Text> optionTexts; // Assign these in the inspector
@@ -17,7 +18,7 @@ public class DisplayResponses : MonoBehaviour
         {
             if (i < newResponses.Count)
             {
-                optionTexts[i].text = newResponses[i];
+                optionTexts[i].text = newResponses[i]; // Assign each response to a separate TMP_Text
             }
             else
             {
@@ -25,4 +26,5 @@ public class DisplayResponses : MonoBehaviour
             }
         }
     }
+
 }
