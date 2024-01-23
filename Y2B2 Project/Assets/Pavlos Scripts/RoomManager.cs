@@ -18,6 +18,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         // Initialize UI
         roomInfoText.text = "";
         playerListText.text = "";
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public void CreateRoom()
@@ -71,6 +72,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        Debug.Log(newPlayer.NickName + " joined the room. Player count: " + PhotonNetwork.PlayerList.Length);
         roomInfoText.text = newPlayer.NickName + " joined the room.";
         UpdatePlayerList();
     }
@@ -90,14 +92,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
 
         // Check if the number of players in the room has reached the maxPlayers
-        if (PhotonNetwork.PlayerList.Length == maxPlayers)
+        if (PhotonNetwork.PlayerList.Length == maxPlayers && PhotonNetwork.IsMasterClient)
         {
-            // Load the game scene
-            // Make sure only the MasterClient loads the level to prevent loading it multiple times
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.LoadLevel("Game_Ai");
-            }
+            PhotonNetwork.LoadLevel("Game_Ai");
         }
     }
 }
