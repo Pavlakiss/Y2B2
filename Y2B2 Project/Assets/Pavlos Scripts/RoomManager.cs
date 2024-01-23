@@ -16,13 +16,25 @@ public class RoomManager : MonoBehaviourPunCallbacks
     private bool isJoiningRoom = false;
     private string roomNameToJoin = "";
 
+    void Start()
+    {
+        // Initialize UI
+        roomInfoText.text = "";
+        playerListText.text = "";
+    }
+
     public void CreateRoom()
     {
         string roomName = createInput.text;
         Debug.Log("Trying to create room with name: " + roomName);
         if (!string.IsNullOrEmpty(roomName))
         {
-            RoomOptions options = new RoomOptions() { MaxPlayers = maxPlayers };
+            RoomOptions options = new RoomOptions
+            {
+                MaxPlayers = maxPlayers,
+                IsVisible = true,
+                IsOpen = true
+            };
             PhotonNetwork.CreateRoom(roomName, options);
         }
         else
@@ -36,28 +48,19 @@ public class RoomManager : MonoBehaviourPunCallbacks
         string roomName = joinInput.text;
         if (!string.IsNullOrEmpty(roomName))
         {
-            PhotonNetwork.JoinRoom(roomName);
-        }
-        else
-        {
-            Debug.LogError("Room name is empty or null.");
-        }
-    }
-
-    public void JoinRoom(string roomName)
-    {
-        if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InLobby)
-        {
-            PhotonNetwork.JoinRoom(roomName);
-        }
-        else
-        {
-            isJoiningRoom = true;
-            roomNameToJoin = roomName;
-            if (!PhotonNetwork.IsConnected)
+            if (PhotonNetwork.IsConnected && PhotonNetwork.InLobby)
             {
-                // Connect to the Photon server
-                PhotonNetwork.ConnectUsingSettings();
+                PhotonNetwork.JoinRoom(roomName);
+            }
+            else
+            {
+                isJoiningRoom = true;
+                roomNameToJoin = roomName;
+                if (!PhotonNetwork.IsConnected)
+                {
+                    // Connect to the Photon server
+                    PhotonNetwork.ConnectUsingSettings();
+                }
             }
         }
     }
