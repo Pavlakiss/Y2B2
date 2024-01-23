@@ -21,7 +21,6 @@ public class CountdownController : MonoBehaviour
         while (countdownTime > 0)
         {
             yield return new WaitForSeconds(1f);
-
             countdownTime--;
         }
         countdownDisplay.text = "GO";
