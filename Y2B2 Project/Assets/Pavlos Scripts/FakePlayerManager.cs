@@ -13,17 +13,4 @@ public class FakePlayerManager : MonoBehaviour
         // Add as many as needed
     };
 
-    public string GetRandomInput()
-    {
-        if (predeterminedInputs.Count > 0)
-        {
-            int index = Random.Range(0, predeterminedInputs.Count);
-            return predeterminedInputs[index];
-        }
-        else
-        {
-            // Optionally handle the case where there are no predefined inputs
-            return ""; // or return some default input
-        }
-    }
 }
