@@ -6,6 +6,8 @@ using System.Collections.Generic;
 public class InputManager : MonoBehaviourPun
 {
     public TMP_InputField inputField;
+    public static List<string> playerResponses = new List<string>();
+
 
     [PunRPC]
     void SaveResponse(string playerResponse, PhotonMessageInfo info)
@@ -19,6 +21,7 @@ public class InputManager : MonoBehaviourPun
     }
     public void SubmitResponse()
     {
+        playerResponses.Add(inputField.text);
         if (!string.IsNullOrEmpty(inputField.text))
         {
             // Assuming you have a PhotonView attached to this GameObject

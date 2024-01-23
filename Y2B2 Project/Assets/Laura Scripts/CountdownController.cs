@@ -20,8 +20,6 @@ public class CountdownController : MonoBehaviour
     {
         while (countdownTime > 0)
         {
-            countdownDisplay.text = countdownTime.ToString();
-
             yield return new WaitForSeconds(1f);
 
             countdownTime--;
