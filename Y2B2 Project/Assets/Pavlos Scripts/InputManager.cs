@@ -1,22 +1,31 @@
-using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
-public class InputManager : MonoBehaviour
+public class InputManager : MonoBehaviourPun
 {
-    public static List<string> playerResponses = new List<string>(); // Static list to hold responses
     public TMP_InputField inputField;
 
+    [PunRPC]
+    void SaveResponse(string playerResponse, PhotonMessageInfo info)
+    {
+        // Logic to add the response to a shared list or room properties
+        // Example using room properties (simplified, actual implementation may vary):
+        var responses = PhotonNetwork.CurrentRoom.CustomProperties["responses"] as List<string> ?? new List<string>();
+        responses.Add(playerResponse);
+        PhotonNetwork.CurrentRoom.CustomProperties["responses"] = responses;
+        PhotonNetwork.CurrentRoom.SetCustomProperties(PhotonNetwork.CurrentRoom.CustomProperties);
+    }
     public void SubmitResponse()
     {
         if (!string.IsNullOrEmpty(inputField.text))
         {
-            // Assuming playerResponses is a static list where you store responses
-            // InputManager.playerResponses.Add(inputField.text);
-
-            // Clear the input field
-            inputField.text = "";
+            // Assuming you have a PhotonView attached to this GameObject
+            photonView.RPC("SaveResponse", RpcTarget.AllBuffered, inputField.text);
+            inputField.text = ""; // Clear the input field after submitting
         }
     }
-}
 
+   
+}

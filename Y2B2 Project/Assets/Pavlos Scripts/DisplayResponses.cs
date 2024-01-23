@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using Photon.Pun;
 
 public class DisplayResponses : MonoBehaviour
 {
@@ -8,10 +9,16 @@ public class DisplayResponses : MonoBehaviour
 
     void Start()
     {
-        if (InputManager.playerResponses != null)
+        List<string> responses = new List<string>();
+        // Assuming you have saved each player's response with their nickname as the key
+        foreach (var player in PhotonNetwork.PlayerList)
         {
-            UpdateVotingOptions(InputManager.playerResponses);
+            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(player.NickName, out object response))
+            {
+                responses.Add(response as string);
+            }
         }
+        UpdateVotingOptions(responses);
     }
 
     public void UpdateVotingOptions(List<string> newResponses)
