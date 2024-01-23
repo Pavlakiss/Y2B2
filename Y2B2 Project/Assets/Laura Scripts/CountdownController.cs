@@ -22,6 +22,7 @@ public class CountdownController : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             countdownTime--;
+            countdownDisplay.text = countdownTime.ToString();
         }
         countdownDisplay.text = "GO";
 
