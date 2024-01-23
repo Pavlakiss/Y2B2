@@ -1,41 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using UnityEngine.SceneManagement;
 using Photon.Realtime;
-//using ExitGames.Client.Photon;
+using UnityEngine.SceneManagement; // Add this to use SceneManager
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
+    public string startScreenSceneName = "StartScreen"; // Name of the start screen scene
 
-    // This function should handle the event when the connection to the master server fails.
-    public override void OnDisconnected(DisconnectCause cause)
+    void Start()
     {
-        Debug.Log("Failed to connect to Photon Server. Cause: " + cause.ToString());
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.ConnectUsingSettings(); // Connect to Photon servers
+            PhotonNetwork.GameVersion = "1.0"; // Set your game version
+        }
     }
 
-    // This function is called as soon as you are connected with the master server and ready to join a lobby.
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected to Photon Master Server!");
-        PhotonNetwork.JoinLobby();
+        SceneManager.LoadScene(startScreenSceneName); // Load the start screen scene
     }
 
-    // This function is automatically called when your initial connection with the server is established and ready.
-    private void Start()
+    public override void OnDisconnected(DisconnectCause cause)
     {
-        PhotonNetwork.ConnectUsingSettings();
-        ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable();
-        hash.Add("score", 675);
-        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-    }
-
-    // This function is called when you have successfully joined the lobby.
-    public override void OnJoinedLobby()
-    {
-        Debug.Log("Joined Photon Lobby!");
-
-        PhotonNetwork.LoadLevel("StartScreen");
+        Debug.Log("Disconnected from Photon Server. Cause: " + cause.ToString());
+        // Handle reconnection or inform the user
     }
 }

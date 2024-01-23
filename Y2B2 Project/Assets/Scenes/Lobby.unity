@@ -1181,6 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f96ac3a50665147b7958e2819697fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startScreenSceneName: Game_Ai
 --- !u!4 &881609610
 Transform:
   m_ObjectHideFlags: 0
@@ -1724,7 +1725,7 @@ MonoBehaviour:
   playerListText: {fileID: 980982069}
   joinButton: {fileID: 1263544750}
   createButton: {fileID: 2095358382}
-  maxPlayers: 3
+  maxPlayers: 2
 --- !u!1 &1239935347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,7 +2608,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1459617791
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

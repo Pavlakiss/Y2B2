@@ -54,10 +54,7 @@ public class VoteMechanic : MonoBehaviourPunCallbacks
             votes[option] = 0;
         }
         votes[option]++;
-
         Debug.Log($"Fake player vote received for option {option}. Total votes for this option: {votes[option]}");
-
         CheckIfAllVotesReceived();
     }
-
 }
