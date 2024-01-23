@@ -41,8 +41,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 392.8, y: 1}
+        m_Offset: {x: 2768, y: 280.13}
     m_Ints: []
     m_Floats:
     - _Ambient: 0.5
@@ -68,7 +68,7 @@ Material:
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _OutlineSoftness: 0
-    - _OutlineUVSpeedX: 0
+    - _OutlineUVSpeedX: 361.23
     - _OutlineUVSpeedY: 0
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
