@@ -12,9 +12,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public TMP_Text playerListText; // Text element to display the list of players in the room
     public Button joinButton; // Button to join a room
     public Button createButton; // Button to create a room
-    public byte maxPlayers = 2; // Max players allowed in the room
-    private bool isJoiningRoom = false;
-    private string roomNameToJoin = "";
 
     void Start()
     {
@@ -29,17 +26,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Debug.Log("Trying to create room with name: " + roomName);
         if (!string.IsNullOrEmpty(roomName))
         {
-            RoomOptions options = new RoomOptions
-            {
-                MaxPlayers = maxPlayers,
-                IsVisible = true,
-                IsOpen = true
-            };
+            RoomOptions options = new RoomOptions();
+            options.MaxPlayers = 2; // You can set the max players for the room
             PhotonNetwork.CreateRoom(roomName, options);
         }
         else
         {
-            Debug.LogError("Room name is empty or null.");
+            Debug.LogError("Room name is empty or null."); // Add this line
         }
     }
 
@@ -48,29 +41,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         string roomName = joinInput.text;
         if (!string.IsNullOrEmpty(roomName))
         {
-            if (PhotonNetwork.IsConnected && PhotonNetwork.InLobby)
-            {
-                PhotonNetwork.JoinRoom(roomName);
-            }
-            else
-            {
-                isJoiningRoom = true;
-                roomNameToJoin = roomName;
-                if (!PhotonNetwork.IsConnected)
-                {
-                    // Connect to the Photon server
-                    PhotonNetwork.ConnectUsingSettings();
-                }
-            }
-        }
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        if (isJoiningRoom)
-        {
-            PhotonNetwork.JoinRoom(roomNameToJoin);
-            isJoiningRoom = false;
+            PhotonNetwork.JoinRoom(roomName);
         }
     }
 
@@ -78,6 +49,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         roomInfoText.text = "Joined Room: " + PhotonNetwork.CurrentRoom.Name;
         UpdatePlayerList();
+        PhotonNetwork.LoadLevel("Game"); // Load the game scene
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -108,15 +80,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
         foreach (var player in PhotonNetwork.PlayerList)
         {
             playerListText.text += player.NickName + "\n";
-        }
-        // Check if the number of players in the room has reached the maxPlayers
-        if (PhotonNetwork.PlayerList.Length == maxPlayers)
-        {
-            // Load the game scene
-            if (PhotonNetwork.IsMasterClient) // Optionally only let the master client load the scene
-            {
-                PhotonNetwork.LoadLevel("Game_Ai");
-            }
         }
     }
 }
