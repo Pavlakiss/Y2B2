@@ -13,6 +13,17 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public Button joinButton; // Button to join a room
     public Button createButton; // Button to create a room
     public byte maxPlayers = 2; // Max players allowed in the room
+    private bool isJoiningRoom = false;
+    private string roomNameToJoin = "";
+
+    public override void OnConnectedToMaster()
+    {
+        if (isJoiningRoom)
+        {
+            PhotonNetwork.JoinRoom(roomNameToJoin);
+            isJoiningRoom = false;
+        }
+    }
 
     void Start()
     {
@@ -37,12 +48,17 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public void JoinRoom()
+    public void JoinRoom(string roomName)
     {
-        string roomName = joinInput.text;
-        if (!string.IsNullOrEmpty(roomName))
+        if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InLobby)
         {
             PhotonNetwork.JoinRoom(roomName);
+        }
+        else
+        {
+            isJoiningRoom = true;
+            roomNameToJoin = roomName;
+            // Optional: Connect to Photon Server if not connected
         }
     }
 
