@@ -16,21 +16,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
     private bool isJoiningRoom = false;
     private string roomNameToJoin = "";
 
-    void Start()
-    {
-        // Initialize UI
-        roomInfoText.text = "";
-        playerListText.text = "";
-    }
-
     public void CreateRoom()
     {
         string roomName = createInput.text;
         Debug.Log("Trying to create room with name: " + roomName);
         if (!string.IsNullOrEmpty(roomName))
         {
-            RoomOptions options = new RoomOptions();
-            options.MaxPlayers = maxPlayers; // You can set the max players for the room
+            RoomOptions options = new RoomOptions() { MaxPlayers = maxPlayers };
             PhotonNetwork.CreateRoom(roomName, options);
         }
         else
@@ -42,7 +34,14 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public void JoinRoom()
     {
         string roomName = joinInput.text;
-        JoinRoom(roomName);
+        if (!string.IsNullOrEmpty(roomName))
+        {
+            PhotonNetwork.JoinRoom(roomName);
+        }
+        else
+        {
+            Debug.LogError("Room name is empty or null.");
+        }
     }
 
     public void JoinRoom(string roomName)
