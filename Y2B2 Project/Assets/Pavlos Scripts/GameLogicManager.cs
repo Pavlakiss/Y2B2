@@ -21,20 +21,20 @@ public class GameLogicManager : MonoBehaviourPunCallbacks
     void TransitionToVotingPhase()
     {
         // Use InputManager.playerResponses directly
-        displayResponses.UpdateVotingOptions(InputManager.playerResponses);
+        //displayResponses.UpdateVotingOptions(InputManager.playerResponses);
         voteMechanic.VotingPhase = true;
-        SimulateFakePlayerVote();
+        //SimulateFakePlayerVote();
     }
 
 
-    void SimulateFakePlayerVote()
-    {
-        string fakeInput = fakePlayerManager.GetRandomInput();
-        if (!string.IsNullOrEmpty(fakeInput))
-        {
-            voteMechanic.ReceiveVote(fakeInput); // Call the overloaded version of ReceiveVote
-        }
-    }
+    //void SimulateFakePlayerVote()
+    //{
+       // string fakeInput = fakePlayerManager.GetRandomInput();
+        //if (!string.IsNullOrEmpty(fakeInput))
+        //{
+           // voteMechanic.ReceiveVote(fakeInput); // Call the overloaded version of ReceiveVote
+        //}
+    //}
 
 
     public void TransitionToResultPhase()
