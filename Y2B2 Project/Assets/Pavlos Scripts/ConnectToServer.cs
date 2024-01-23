@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using UnityEngine.SceneManagement;
 using Photon.Realtime;
-//using ExitGames.Client.Photon;
+using UnityEngine.SceneManagement; // Add this to use SceneManager
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
+    public string startScreenSceneName = "StartScreen"; // Name of the start screen scene
+
     void Start()
     {
         if (!PhotonNetwork.IsConnected)
@@ -20,7 +19,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected to Photon Master Server!");
-        // Optionally load a scene or enable UI for room creation/joining
+        SceneManager.LoadScene(startScreenSceneName); // Load the start screen scene
     }
 
     public override void OnDisconnected(DisconnectCause cause)
