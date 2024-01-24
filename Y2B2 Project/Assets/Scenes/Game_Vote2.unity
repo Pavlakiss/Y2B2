@@ -409,8 +409,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: Option 3
-  creatorName: 
-  VotingPlayer: 
 --- !u!114 &16560536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,8 +573,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: Option 6
-  creatorName: 
-  VotingPlayer: 
 --- !u!114 &140650668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,8 +1385,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: Option 5
-  creatorName: 
-  VotingPlayer: 
 --- !u!114 &312846510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,8 +1701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: 
-  creatorName: 
-  VotingPlayer: 
 --- !u!1 &659125425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,8 +2372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: Option 2
-  creatorName: 
-  VotingPlayer: 
 --- !u!114 &832014704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,7 +2421,7 @@ MonoBehaviour:
   voteMechanic: {fileID: 972658952}
   displayResponses: {fileID: 1423067305}
   fakePlayerManager: {fileID: 1256952599}
-  nextSceneName: 
+  nextSceneName: RightAnswer2
 --- !u!4 &847291274
 Transform:
   m_ObjectHideFlags: 0
@@ -2586,7 +2576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalPlayers: 5
-  PlayerPhase: 0
   VotingPhase: 1
   ReadyPhase: 0
   ResultPhase: 0
@@ -3518,8 +3507,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: Option 4
-  creatorName: 
-  VotingPlayer: 
 --- !u!114 &1473121167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3684,8 +3671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   votemechanic: {fileID: 972658952}
   ButtonOption: Option 1
-  creatorName: 
-  VotingPlayer: 
 --- !u!114 &1629116730
 MonoBehaviour:
   m_ObjectHideFlags: 0
