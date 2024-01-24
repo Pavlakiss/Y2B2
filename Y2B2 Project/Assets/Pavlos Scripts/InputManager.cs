@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviourPun
     public TMP_InputField inputField;
     public static List<string> playerResponses = new List<string>();
     public static InputManager Instance;
+    List<string> responses = new();
 
     void Awake()
     {
@@ -29,7 +30,7 @@ public class InputManager : MonoBehaviourPun
         // Logic to add the response to a shared list or room properties
         // Example using room properties (simplified, actual implementation may vary):
         string[] responsesArray = PhotonNetwork.CurrentRoom.CustomProperties["responses"] as string[] ?? new string[] { };
-        List<string> responses = new List<string>(responsesArray);
+        //List<string> responses = new List<string>(responsesArray);
 
         // Add the new response
         responses.Add(playerResponse);
@@ -58,6 +59,8 @@ public class InputManager : MonoBehaviourPun
     {
         if (!string.IsNullOrEmpty(inputField.text))
         {
+
+   
             // Add the response to the local list (not strictly necessary if you're using room properties)
             playerResponses.Add(inputField.text);
 
