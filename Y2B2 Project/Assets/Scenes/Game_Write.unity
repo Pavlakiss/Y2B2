@@ -902,7 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531f90aaf08964646a6edf7d5d63e3d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTimeInSeconds: 20
+  totalTimeInSeconds: 125
   countdownTimeText: {fileID: 1418119524}
   nextSceneName: Game_Vote
 --- !u!1 &546184027

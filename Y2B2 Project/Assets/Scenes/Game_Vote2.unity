@@ -180,9 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Option 2
-
-'
+  m_text: Raccoon.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c4ff962bd6127744aa290bb0569fccf, type: 2}
   m_sharedMaterial: {fileID: -490505376864150352, guid: 9c4ff962bd6127744aa290bb0569fccf,
@@ -210,7 +208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 59.7
   m_fontSizeBase: 25.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -645,9 +643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Option 3
-
-'
+  m_text: Small mammal fails to escape camp.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c4ff962bd6127744aa290bb0569fccf, type: 2}
   m_sharedMaterial: {fileID: -490505376864150352, guid: 9c4ff962bd6127744aa290bb0569fccf,
@@ -675,7 +671,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 40.45
   m_fontSizeBase: 25.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1054,7 +1050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Option 4
+  m_text: 'Raccoon steals weapons from enemy camp.
 
 '
   m_isRightToLeft: 0
@@ -1084,7 +1080,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 37.7
   m_fontSizeBase: 25.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2019,9 +2015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Option 6
-
-'
+  m_text: A raccoon's trash adventure goes wrong when a cat shows up.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c4ff962bd6127744aa290bb0569fccf, type: 2}
   m_sharedMaterial: {fileID: -490505376864150352, guid: 9c4ff962bd6127744aa290bb0569fccf,
@@ -2049,7 +2043,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 33.45
   m_fontSizeBase: 25.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4194,7 +4188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option 5
+  m_text: Private R. Coon tried to sneak out during the night.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c4ff962bd6127744aa290bb0569fccf, type: 2}
   m_sharedMaterial: {fileID: -490505376864150352, guid: 9c4ff962bd6127744aa290bb0569fccf,
@@ -4222,7 +4216,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 35.5
   m_fontSizeBase: 25.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
