@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class CountdownController : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class CountdownController : MonoBehaviour
         countdownDisplay.text = "GO";
 
         // When countdown reaches zero, load the next scene
-        SceneManager.LoadScene(nextSceneName);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel(nextSceneName); // Replace "VotingSceneName" with your actual scene name
+        }
     }
 }

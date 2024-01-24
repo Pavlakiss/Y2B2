@@ -1,14 +1,12 @@
 using Photon.Pun;
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class VoteMechanic : MonoBehaviourPunCallbacks
 {
-    public int totalPlayers = 5;
-    private Dictionary<string, int> votes = new Dictionary<string, int>(); // To store the votes for each option
-    private HashSet<int> playersWhoVoted = new HashSet<int>(); // To store the IDs of players who have already voted
-    public bool PlayerPhase;
+    public int totalPlayers = 2;
+    private Dictionary<string, int> votes = new Dictionary<string, int>();
+    private HashSet<int> playersWhoVoted = new HashSet<int>();
     public bool VotingPhase;
     public bool ReadyPhase;
     public bool ResultPhase;
@@ -18,7 +16,6 @@ public class VoteMechanic : MonoBehaviourPunCallbacks
         VotingPhase = true;
     }
 
-    // Method to change player's phase to ready
     public void ChangeToReadyPhase()
     {
         VotingPhase = false;
@@ -27,16 +24,13 @@ public class VoteMechanic : MonoBehaviourPunCallbacks
         CheckIfAllVotesReceived();
     }
 
-    // Method to change to result phase
     public void ChangeToResultPhase()
     {
         ResultPhase = true;
         ReadyPhase = false;
         Debug.Log("ResultPhase");
-        // Here you can handle what happens when the result phase is reached
     }
 
-    // Method to check if all votes are received
     private void CheckIfAllVotesReceived()
     {
         if (votes.Count == totalPlayers)
@@ -45,16 +39,27 @@ public class VoteMechanic : MonoBehaviourPunCallbacks
         }
     }
 
-    // RPC to receive votes
     [PunRPC]
-    public void ReceiveVote(string option)
+    public void ReceiveVote(string option, PhotonMessageInfo info)
     {
+        if (playersWhoVoted.Contains(info.Sender.ActorNumber))
+        {
+            Debug.LogWarning("This player has already voted.");
+            return;
+        }
+
         if (!votes.ContainsKey(option))
         {
             votes[option] = 0;
         }
         votes[option]++;
-        Debug.Log($"Fake player vote received for option {option}. Total votes for this option: {votes[option]}");
-        CheckIfAllVotesReceived();
+        playersWhoVoted.Add(info.Sender.ActorNumber);
+
+        Debug.Log($"Vote received for option {option}. Total votes for this option: {votes[option]}");
+
+        if (playersWhoVoted.Count >= totalPlayers)
+        {
+            ChangeToReadyPhase();
+        }
     }
 }

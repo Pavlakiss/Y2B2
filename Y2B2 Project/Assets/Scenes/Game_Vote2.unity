@@ -786,8 +786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: i want to write a pretty big text in here fosdjf sodifo sfd poosdf sd oos
-    dg iofo g fdgd os
+  m_text: Option 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c4ff962bd6127744aa290bb0569fccf, type: 2}
   m_sharedMaterial: {fileID: -490505376864150352, guid: 9c4ff962bd6127744aa290bb0569fccf,
@@ -815,7 +814,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.5
+  m_fontSize: 72
   m_fontSizeBase: 25.54
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1706,7 +1705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbff8813c66271488c79a9221cf0e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  votemechanic: {fileID: 0}
+  votemechanic: {fileID: 972658952}
   ButtonOption: 
   creatorName: 
   VotingPlayer: 
@@ -2427,10 +2426,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec5ce18fa75fcb469860ffb1610ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 0}
+  inputManager: {fileID: 2865649991991904119, guid: 0d41743135cee7a4891d351c135ef510,
+    type: 3}
   voteMechanic: {fileID: 972658952}
   displayResponses: {fileID: 1423067305}
-  fakePlayerManager: {fileID: 1256952597}
+  fakePlayerManager: {fileID: 1256952599}
+  nextSceneName: 
 --- !u!4 &847291274
 Transform:
   m_ObjectHideFlags: 0
@@ -2550,7 +2551,6 @@ GameObject:
   - component: {fileID: 972658951}
   - component: {fileID: 972658952}
   - component: {fileID: 972658953}
-  - component: {fileID: 972658954}
   m_Layer: 0
   m_Name: Vote_Mechanic
   m_TagString: Untagged
@@ -2587,7 +2587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalPlayers: 5
   PlayerPhase: 0
-  VotingPhase: 0
+  VotingPhase: 1
   ReadyPhase: 0
   ResultPhase: 0
 --- !u!114 &972658953
@@ -2612,24 +2612,6 @@ MonoBehaviour:
   sceneViewId: 555
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &972658954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972658950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608253fd5fe6cf742a46c4364afed749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  predeterminedInputs:
-  - Fake Input 1
-  - Fake Input 2
-  - Fake Input 3
-  - Fake Input 4
-  - Fake Input 5
 --- !u!1 &978508830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,7 +2875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256952598}
-  - component: {fileID: 1256952597}
+  - component: {fileID: 1256952599}
   m_Layer: 0
   m_Name: Fake_Player_Manager
   m_TagString: Untagged
@@ -2901,7 +2883,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1256952597
+--- !u!4 &1256952598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256952596}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 984.9173, y: 526.3174, z: 2.5700684}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256952599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2919,21 +2916,6 @@ MonoBehaviour:
   - Fake Input 3
   - Fake Input 4
   - Fake Input 5
---- !u!4 &1256952598
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256952596}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 984.9173, y: 526.3174, z: 2.5700684}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290395255
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 
 public class TimerLonger : MonoBehaviour
 {
@@ -38,7 +39,10 @@ public class TimerLonger : MonoBehaviour
                 Debug.Log("Timer has reached zero!");
                 // You can perform any actions you want when the timer reaches zero here
 
-                SceneManager.LoadScene(nextSceneName);
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    PhotonNetwork.LoadLevel(nextSceneName);
+                }
             }
         }
     }

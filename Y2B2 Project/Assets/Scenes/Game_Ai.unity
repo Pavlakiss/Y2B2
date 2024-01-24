@@ -6479,7 +6479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7151a56318bf52347beb5e3021aee638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 100
+  countdownTime: 2
   countdownDisplay: {fileID: 1161289101}
   nextSceneName: Timer
 --- !u!114 &2016939329

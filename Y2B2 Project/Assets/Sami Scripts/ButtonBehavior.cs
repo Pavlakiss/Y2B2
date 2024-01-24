@@ -5,8 +5,6 @@ public class ButtonBehavior : MonoBehaviour
 {
     public VoteMechanic votemechanic;
     public string ButtonOption;
-    public string creatorName;
-    public string VotingPlayer;
 
     public void OnButtonPress()
     {
@@ -23,6 +21,7 @@ public class ButtonBehavior : MonoBehaviour
         }
 
         Debug.Log("Vote button pressed for option: " + ButtonOption);
+
         PhotonView photonView = votemechanic.GetComponent<PhotonView>();
         if (photonView != null)
         {
