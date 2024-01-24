@@ -904,7 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTimeInSeconds: 125
   countdownTimeText: {fileID: 1418119524}
-  nextSceneName: Game_Vote
+  nextSceneName: Game_Vote1
 --- !u!1 &546184027
 GameObject:
   m_ObjectHideFlags: 0
