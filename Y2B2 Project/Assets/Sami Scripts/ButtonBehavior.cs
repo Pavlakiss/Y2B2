@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonBehavior : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class ButtonBehavior : MonoBehaviour
         }
 
         Debug.Log("Vote button pressed for option: " + ButtonOption);
+        // make the button turn grey
+        gameObject.GetComponent<Image>().color = Color.grey;
 
         PhotonView photonView = votemechanic.GetComponent<PhotonView>();
         if (photonView != null)

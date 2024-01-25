@@ -32,6 +32,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
             options.IsOpen = true; // Ensure the room is open to join
             options.IsVisible = true; // Ensure the room is visible in the lobby
             PhotonNetwork.CreateRoom(roomName, options);
+            GameObject.Find("Create_Button").GetComponent<Image>().color = Color.grey;
         }
         else
         {
@@ -46,6 +47,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         if (!string.IsNullOrEmpty(roomName))
         {
             PhotonNetwork.JoinRoom(roomName);
+            GameObject.Find("Join_Button").GetComponent<Image>().color = Color.grey;
         }
         else
         {

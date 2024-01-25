@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Photon.Pun;
+using UnityEngine.UI;
 public class PlayerNameInput : MonoBehaviour
 {
     public TextMeshProUGUI InputText;
@@ -32,6 +33,7 @@ public class PlayerNameInput : MonoBehaviour
         {
             PlayerPrefs.SetString("name", SaveName); // Save the name locally
             PlayerNames.Instance.SavePlayerName(SaveName); // Save the name to Photon
+            GameObject.Find("Button").GetComponent<Image>().color = Color.grey;
 
             PhotonNetwork.LoadLevel("Lobby"); // Load the next scene
         }
